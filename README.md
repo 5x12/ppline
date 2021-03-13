@@ -1,18 +1,18 @@
 # ppline
 
-# About
+# 1. About
 
 ppline can trigger your python modules in any specified order, making it look like a pipeline! 
 
 
-### Installation
+### 1.1. Installation
 
 ```bash
 pip install ppline
 ```
 
 
-### How it works
+### 1.2. How it works
 
 Ppline takes configuration of your pipeline from .yml file, so you have to create it in your root directory in the following form:
 
@@ -56,4 +56,13 @@ class SomeFunction(object):
 		self.divide()
     
 ```
+
+### 1.3. How to use
+
+In your working directory write:
+
+```bash
+python -m ppline.cli --pipeline_config file.yml
+```
+
 
