@@ -35,9 +35,9 @@ class Yamlread(object):
             exec(f'from {_file} import {_class}')
             
             exec(f'c{i} = {_class}()')
-            exec(f'c{i}._exec()')
+            exec(f'c{i}()')
 
-    def _exec(self):
+    def __call__(self):
         self.parse_pipeline()
         self.extract_executables()
         self.executor()

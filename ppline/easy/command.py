@@ -4,9 +4,6 @@ from ppline.yamlread.yamlread import Yamlread
 
 class Run:
     def __init__(self, pipeline_config=str, project_dir: Optional[str] = None):
-
-        print('d')
-        #path to config
         
         self.pipeline_config = pipeline_config
         self.project_dir = project_dir
@@ -21,4 +18,4 @@ class Run:
             PROJECT_DIR_KEYNAME = self.pipeline_config
             
         execute=Yamlread(dag_path=PROJECT_DIR_KEYNAME)
-        execute._exec()
+        execute()

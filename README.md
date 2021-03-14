@@ -31,17 +31,17 @@ Here is the example:
 ```text
 steps:
     preProcessing:
-        exec: src/preprocessing.py:SomeClass
+        exec: src/calculation.py:Calculate
     kMeans:
         exec: src/models.py:Kmeans
     hyperTuning:
         exec: src/tuning.py:GridSearch
 ```
 
-Any executable class should have a method ``_exec()``, because ppline is searching for that method to execute. For example:
+Any executable class should have a method ``__call__``. For example:
 
 ```python
-class SomeClass(object):
+class Calculate(object):
 	def sum(self):
 		a=2
 		b=4
@@ -51,20 +51,23 @@ class SomeClass(object):
 		f=4
 		self.d = self.c/f
 
-	def _exec(self):
+    def show_result(self):
+        print(self.d)
+
+	def __call__(self):
 		self.sum()
 		self.divide()
+        self.show_result()
     
 ```
 
 ### 1.3. How to use
 
-In your working directory write:
+Create a .yml file in your root directory, with pipeline config. Then, use the following command to trigger the pipeline
 
 ```bash
 python -m ppline.cli --pipeline_config file.yml
 ```
-
 
 ### 1.4. To do
 
