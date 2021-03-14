@@ -21,7 +21,7 @@ setuptools.setup(
    version=version,
    author=PACKAGE_AUTHOR,
    url = 'https://github.com/5x12/ppline',
-   download_url = 'https://github.com/5x12/ppline/archive/0.1.7.tar.gz',
+   download_url = 'https://github.com/5x12/ppline/archive/0.1.8.tar.gz',
    description=PACKAGE_DESCR,
    long_description=long_description,
    license='MIT',
