@@ -31,7 +31,7 @@ Here is the example:
 ```text
 steps:
     preProcessing:
-        exec: src/preprocessing.py:SomeFunction
+        exec: src/preprocessing.py:SomeClass
     kMeans:
         exec: src/models.py:Kmeans
     hyperTuning:
@@ -41,7 +41,7 @@ steps:
 Any executable class should have a method ``_exec()``, because ppline is searching for that method to execute. Hence:
 
 ```python
-class SomeFunction(object):
+class SomeClass(object):
 	def sum(self):
 		a=2
 		b=4
