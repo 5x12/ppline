@@ -27,7 +27,7 @@ setuptools.setup(
    license='MIT',
    long_description_content_type='text/markdown',
    packages=setuptools.find_packages(),
-   # install_requires=parse_requirements('requirements.txt'),
+   install_requires=parse_requirements('requirements.txt'),
    keywords = ['PIPELINE', 'PIPE'],
    python_requires='>=3.6',
    include_package_data=True,
