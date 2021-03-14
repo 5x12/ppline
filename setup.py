@@ -10,9 +10,6 @@ try:
 except ImportError:
    exec(f'from {PACKAGE_NAME}.version import __version__ as version')
 
-def parse_requirements(filename):
-    lines = (line.strip() for line in open(filename))
-    return [line for line in lines if line and not line.startswith("#")]
 
 with open('README.md', 'r') as f: long_description=f.read()
 
@@ -21,13 +18,13 @@ setuptools.setup(
    version=version,
    author=PACKAGE_AUTHOR,
    url = 'https://github.com/5x12/ppline',
-   download_url = 'https://github.com/5x12/ppline/archive/0.1.8.tar.gz',
+   download_url = 'https://github.com/5x12/ppline/archive/0.1.9.tar.gz',
    description=PACKAGE_DESCR,
    long_description=long_description,
    license='MIT',
    long_description_content_type='text/markdown',
    packages=setuptools.find_packages(),
-   install_requires=parse_requirements('requirements.txt'),
+   install_requires=['schema'],
    keywords = ['PIPELINE', 'PIPE'],
    python_requires='>=3.6',
    include_package_data=True,
