@@ -38,7 +38,7 @@ steps:
         exec: src/tuning.py:GridSearch
 ```
 
-Any executable class should have a method ``_exec()``, because ppline is searching for that method to execute. Hence:
+Any executable class should have a method ``_exec()``, because ppline is searching for that method to execute. For example:
 
 ```python
 class SomeClass(object):
