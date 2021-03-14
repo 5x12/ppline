@@ -70,4 +70,5 @@ python -m ppline.cli --pipeline_config file.yml
 
 - dependency map between steps
 - independent steps in parallel
+- make png export of visualized pipeline w/ names
 
