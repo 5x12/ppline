@@ -31,7 +31,7 @@ Here is the example:
 ```text
 steps:
     preProcessing:
-        exec: src/preprocessing.py:Extract
+        exec: src/preprocessing.py:SomeFunction
     kMeans:
         exec: src/models.py:Kmeans
     hyperTuning:
