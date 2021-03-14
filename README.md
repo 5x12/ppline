@@ -66,3 +66,8 @@ python -m ppline.cli --pipeline_config file.yml
 ```
 
 
+### 1.4. To do
+
+- dependency map between steps
+- independent steps in parallel
+
