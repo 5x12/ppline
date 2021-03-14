@@ -21,7 +21,7 @@ setuptools.setup(
    version=version,
    author=PACKAGE_AUTHOR,
    url = 'https://github.com/5x12/ppline',
-   download_url = 'https://github.com/5x12/ppline/archive/0.1.0.tar.gz',
+   download_url = 'https://github.com/5x12/ppline/archive/0.1.1.tar.gz',
    description=PACKAGE_DESCR,
    long_description=long_description,
    license='MIT',
@@ -34,7 +34,6 @@ setuptools.setup(
    classifiers=[
     'Development Status :: 3 - Alpha',   
     'Intended Audience :: Developers',      
-    'Topic :: Machine Learning :: Build Tools',
     'License :: OSI Approved :: MIT License',   
     'Programming Language :: Python :: 3.6',
   ],
