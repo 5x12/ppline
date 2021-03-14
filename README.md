@@ -51,13 +51,13 @@ class Calculate(object):
 		f=4
 		self.d = self.c/f
 
-    def show_result(self):
-        print(self.d)
+        def show_result(self):
+                print(self.d)
 
 	def __call__(self):
 		self.sum()
 		self.divide()
-        self.show_result()
+                self.show_result()
     
 ```
 
