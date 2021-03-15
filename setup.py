@@ -24,7 +24,7 @@ setuptools.setup(
    license='MIT',
    long_description_content_type='text/markdown',
    packages=setuptools.find_packages(),
-   install_requires=['schema', 'PyYAML', 'pathlib', 'json', 'os', 'argparse', 'typing'],
+   install_requires=['schema', 'PyYAML', 'pathlib', 'os', 'argparse', 'typing'],
    keywords = ['PIPELINE', 'PIPE'],
    python_requires='>=3.6',
    include_package_data=True,

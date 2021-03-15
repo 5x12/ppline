@@ -1,6 +1,5 @@
 import argparse
 import os
-import json
 import pathlib
 from typing import Optional
 from ppline.easy.command import Run
