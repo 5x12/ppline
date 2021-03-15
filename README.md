@@ -80,5 +80,5 @@ python -m ppline.cli --pipeline_config file.yml
 
 ### 0.2.2 (2021-03-15)
 
-- __call__ method is implmented 
+- \_\_call\_\_ method is implemented 
 - minor bug fixes
