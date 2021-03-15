@@ -69,9 +69,16 @@ Create a .yml file in your root directory, with pipeline config. Then, use the f
 python -m ppline.cli --pipeline_config file.yml
 ```
 
-### 1.4. To do
+# 1.4. To do
 
 - dependency map between steps
 - independent steps in parallel
 - make png export of visualized pipeline w/ names
 
+
+# Changes
+
+### 0.2.2 (2021-03-15)
+
+- __call__ method is implmented 
+- minor bug fixes
