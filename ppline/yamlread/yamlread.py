@@ -6,7 +6,7 @@ from ppline.utils.const import dagmap_consts
 
 
 
-class Yamlread(object):
+class yamlRead(object):
     def __init__(self, dag_path: str):
         self.pipeline = {}
         with open(dag_path, 'r') as inf:
