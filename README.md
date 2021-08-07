@@ -90,3 +90,10 @@ python -m ppline.cli --trigger_class src/calculation.py:Calculate
 - independent steps in parallel
 - make png export of visualized pipeline w/ names
 
+
+# 3. Changes
+
+### 0.2.2 (2021-03-15)
+
+- \_\_call\_\_ method is implemented 
+- minor bug fixes
