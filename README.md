@@ -38,7 +38,7 @@ steps:
         exec: src/tuning.py:GridSearch
 ```
 
-The executable classes specified in collect.yml should have a ``__call__`` method. For instance, if we open aforementioned `src/calculation.py` and look at `Calculate` class, we see __call__ method in the end.
+The executable classes specified in collect.yml should have a ``__call__`` method. For instance, if we open aforementioned in collect.yml file in `src/calculation.py` and look at `Calculate` class that we trigger, we see __call__ method in the end.
 
 ```python
 #this is src/calculation.py
@@ -60,8 +60,11 @@ class Calculate(object):
 		self.sum()
 		self.divide()
         self.show_result()
-
 ```
+
+In order for the ppline to work, you have to make sure that 
+- your code is module-enabled (you have to have `__init__.py` in every directory with `.py` files that you desire to execute classes from;
+- the names of your steps in `.yml` are unique;
 
 After creating a configuration .yml file in your root directory, use the following command to trigger the pipeline in terminal:
 
@@ -71,29 +74,34 @@ python -m ppline.cli --config_file collect.yml
 
 
 ## 2.2. Triggering one class from .py file
-Ppline can also trigger a specific class from a specific .py file. 
+Ppline can also trigger a specific class from a specific .py file.
 
 ```bash
 python -m ppline.cli --trigger_class path/to/file.py:TestClass
 ```
 
-Here is an example of code that triggers a `Calculate` class from `calculation.py` file. Note: TestClass should have a __call__ method that executes desired class functions.
+Below is an example of command that triggers a `Calculate` class from `calculation.py` file.
 
 ```bash
 python -m ppline.cli --trigger_class src/calculation.py:Calculate
 ```
+Note: `Calculate` class should have a `__call__` method that executes desired class functions, and `src/calculation.py` should contain `__init__.py` file. 
 
 
-## 3. To do
+# To do
 
 - dependency map between steps
 - independent steps in parallel
 - make png export of visualized pipeline w/ names
 
 
-# 3. Changes
+# Changes
 
-### 0.2.2 (2021-03-15)
+#### `0.2.5` (2021-08-08)
+- feature to trigger a single class
+- feature to generate gitlab-ci.yml file from the pipeline config file
+- minor bug fixes
 
+#### `0.2.2` (2021-03-15)
 - \_\_call\_\_ method is implemented 
 - minor bug fixes

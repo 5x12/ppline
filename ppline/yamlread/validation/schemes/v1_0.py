@@ -6,20 +6,16 @@ def regex_safe(text: str):
         text = text.replace(symbol, f'\{symbol}')
     return rf'{text}'
 
-
 def complete(regex):
     return rf'^{regex}\Z'
 
-
 exec_path_separator = regex_safe(dagmap_consts.EXEC_PATH_SEPARATOR)
-
 
 STAGE_NAMING_REGEX = r'[a-zA-Z_][-\w]*'
 EXEC_REGEX = rf'\S*{exec_path_separator}[a-zA-Z_]\w*'
 
 STEP_NAME = Regex(complete(STAGE_NAMING_REGEX), error='Invalid step name.')
 EXEC = Regex(complete(EXEC_REGEX), error='Exec path should be patterned as "{module_path.py}:{exec_name}".')
-
 
 STATIC_DAG_SCHEMA = Schema({
     dagmap_consts.STEPS_KEYNAME: {
@@ -37,11 +33,9 @@ STATIC_DAG_SCHEMA = Schema({
             }
         # },
         # Optional(dagmap_consts.DEPENDS_ON_KEYNAME): Or([STEP_NAME], []),
-
         # Optional(dagmap_consts.TAGS_KEYNAME): Or([TAG_NAME], [])
     }
 })
-
 
 def parse_schema(dag: dict, schema: Schema) -> dict:
     return schema.validate(dag)
