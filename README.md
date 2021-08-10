@@ -72,6 +72,12 @@ After creating a configuration .yml file in your root directory, use the followi
 python -m ppline.cli --config_file collect.yml
 ```
 
+### 2.1.2 GitLab CI converter
+You can also convert collect.yml into gitlab-ci.yml for GitLab CI pipeline:
+
+```bash
+python -m ppline.cli --config_file collect.yml -gitlab
+```
 
 ## 2.2. Triggering one class from .py file
 Ppline can also trigger a specific class from a specific .py file.
